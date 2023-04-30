@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (count($errors) == 0) {
       // Prepare the SQL statement
-      $stmt = $conn->prepare("INSERT INTO BloodInfo (hospital_id, blood_type, quantity, expiration_date) VALUES (?, ?, ?, ?)");
+      $stmt = $conn->prepare("INSERT INTO bloodinfo (hospital_id, blood_type, quantity, expiration_date) VALUES (?, ?, ?, ?)");
 
       // Bind the parameters
       $stmt->bind_param("isss", $hospital_id, $blood_type, $quantity, $expiration_date);
